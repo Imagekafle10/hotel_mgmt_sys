@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        overflow: hidden;
+        height: 99.5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color:aliceblue;
+        
+    }
+    .heading-container{
+        position: absolute;
+        top: 20px;
+        font-weight: 600;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:rgb(30, 146, 115) ;
+    }    
+    .sub-container {
+        background-color: rgb(147, 201, 187);
+        height: 70vh;
+        width: 70vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+
+
+    }
+
+    .wallet-box {
+        margin-left: 20px;
+        background-color: white;
+        border-radius: 0.5rem;
+        height: 30vh;
+        width: 30vw;
+        gap: 1.5rem;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+    }
+    .wallet-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .wallet-logo-esewa{
+        margin: 15px 0 0 70px;
+        height: 20vh;
+        width: 20vw;
+        border-radius: 100px;
+        background-image: url(esewa.webp);
+    background-size: cover;
+
+    }
+    .wallet-logo-khalti{
+        margin: 15px 0 0 70px;
+        height: 20vh;
+        width: 20vw;
+        border-radius: 100px;
+        background-image: url(Khalti.jpg);
+    background-size: cover;
+
+    }
+    .wallet-logo-ime{
+        margin: 15px 0 0 70px;
+        height: 20vh;
+        width: 20vw;
+        border-radius: 100px;
+        background-image: url(imepay.png);
+    background-size: cover;
+
+    }
+    .wallet-logo-fone{
+        margin: 15px 0 0 70px;
+        height: 20vh;
+        width: 19vw;
+        border-radius: 100px;
+        background-image: url(fonepay.png);
+    background-size: cover;
+
+    }
+    .wallet-box p{
+        position: relative;
+        top:25vh;
+        right: 13vw;
+    }
+    #payment-selected{
+        position: absolute;
+        bottom:350px;
+        right: 35px;
+        padding: 15px 40px 15px 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        border-radius: 0.5rem;
+        border: none;
+        background-color:rgb(85, 195, 165) ;
+        color:white;
+        cursor: pointer;
+        animation: paymentbtn 1.5s   1  forwards;
+    }
+    @keyframes  paymentbtn{
+        from{
+            right: 10px;
+        }to{
+            right: 35px;
+         }
+        
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="heading-container">
+                <h1>Select Payment Method</h1>
+            </div>
+            <div class="wallet-box">
+              <div class="wallet-logo-esewa">
+
+            </div>
+            <p>Esewa</p>
+        </div>
+
+            <div class="wallet-box">
+                <div class="wallet-logo-khalti">
+                </div>
+                <p>Khalti</p>
+            </div>
+
+            <div class="wallet-box">
+                <div class="wallet-logo-ime">
+                
+                </div>
+            <p>Ime Pay</p>
+
+            </div>
+            <div class="wallet-box">
+                <div class="wallet-logo-fone">
+                
+                </div>
+            <p>FonePay</p>  
+        </div>
+        </div>
+        <button id="payment-selected">Confirm</button>
+    </div>
+</body>
+<script>
+    let paymentSelected = document.querySelector('#payment-selected');
+    paymentSelected.style.display = "none";
+    paymentSelected.addEventListener("click",function(){
+        window.location.href = "http://localhost/imagephp/onlinerestaurant/formrecord/confirmedDisplay.php"
+    });
+    let walletBoxes  = document.querySelectorAll(".wallet-box");
+    walletBoxes.forEach(function (box,idx) {
+        box.addEventListener("click",function(){
+          console.log("Box is Clicked");
+          paymentSelected.style.display = "block";
+         box.style.opacity ='0.5';
+          if(idx == 0){
+         walletBoxes[1].style.opacity ='1';
+         walletBoxes[2].style.opacity ='1';
+         walletBoxes[3].style.opacity ='1';
+          }else if(idx == 1){
+         walletBoxes[0].style.opacity ='1';
+         walletBoxes[2].style.opacity ='1';
+         walletBoxes[3].style.opacity ='1';
+          }else if(idx == 2){
+         walletBoxes[1].style.opacity ='1';
+         walletBoxes[0].style.opacity ='1';
+         walletBoxes[3].style.opacity ='1';
+          }
+          else{
+         walletBoxes[1].style.opacity ='1';
+         walletBoxes[2].style.opacity ='1';
+         walletBoxes[0].style.opacity ='1';
+          }
+        });
+        
+    })
+</script>
+</html>

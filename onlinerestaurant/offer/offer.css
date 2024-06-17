@@ -1,0 +1,116 @@
+body{
+    background-color:rgb(165, 225, 225);
+}  
+
+
+
+.offerDetails{
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    
+    /* border: 2px solid black; */
+    width: 99vw;
+    height: 95vh;
+    position: relative;
+    top: 10px;
+    
+  }
+  .offerdetailsview{
+    /* display: block; */
+  }
+  
+  .addBtn{
+    /* display: none; */
+  }
+  .subBtn{
+    /* display: none; */
+  }
+  
+  
+  
+  .offerDetailsContainer{
+    margin-top: 70px;
+    /* border: 2px solid black; */
+    /* display: none; */
+    border-radius: 0.5rem;
+    width: 23vw;
+    height: 60vh;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background: radial-gradient(#fff,#ffd6d6);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  
+  }
+  .offerDetailsContainer label{
+    font-size: 20px;
+  }
+  .offerDetailsContainer input{
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 0.5rem;
+    width: 20vw;
+    border: 1px solid black;
+  }
+#discountAmount{
+  color: green;
+}
+#finalPrice{
+  color: red;
+}
+
+.addBtn input{
+  border: none;
+  margin-top: 200px;
+  width: 5vw;
+   padding: 15px;
+border-radius: 1rem ;
+font-size: 25px;
+font-weight: bold;
+transition: 0.4s;
+background-color: rgb(162, 161, 161);
+cursor:pointer;
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+ .addBtn input:hover{
+  background-color: rgb(241, 151, 25);
+}
+  
+  .subBtn input{
+    border: none;
+    margin-top: 200px;
+    width: 5vw;
+     padding: 15px;
+  border-radius: 1rem ;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.4s;
+  background-color: rgb(162, 161, 161);
+  cursor:pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+}
+.subBtn input:hover{
+    background-color: rgb(241, 151, 25);
+  }
+  input[type='submit']{
+    margin-top: 15px;
+    width: 10vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(162, 161, 161);
+    color: #fff;
+    transition: 0.5s;
+  cursor:pointer;
+  /* color: #135b59; */
+  }
+   input[type='submit']:hover{
+    background-color: rgb(241, 151, 25);
+  }

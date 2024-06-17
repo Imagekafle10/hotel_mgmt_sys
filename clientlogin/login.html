@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Log in</title>
+</head>
+<body  >
+ <div class="container" id="blur">
+          <div class="display">
+            <h1>Oasis</h1>
+            <p>Enjoy your Healthy and Delicious<br> Food on Oasis.</p>
+        </div>
+        
+        <div class="content">
+            <form action="clientLogin.php" method="post">
+                <input type="text" id="erorUser"  readonly>
+            <input type="text" name="email"  placeholder="Email"  >
+            <div class="sho">
+                <input type="text" name="password" id="passwor" placeholder="Password" >
+            </div>
+            <!-- <div class="in" >
+                <a href=""><p><b> Log in</b></p></a>
+            </div> -->
+            <div class="loginTab">
+                <input type="submit" value="Log In" name="login" id="userLogin">
+            </div>
+
+
+            <div class="pass">
+                <a href="">Forgot password?</a>
+            </div>
+            <div class="line">
+                <hr size="0.5">
+            </div>
+<div class="new">
+    <div class="create">
+   <a href="#"><p  > <b>Create new account</b> </p></a> 
+</div>
+</div>
+<div class="last">
+    <!-- <p><b>Create a Page </b> for a celebrity, brand or business.</p> -->
+</div>
+</div>
+</div>
+</form>
+
+
+
+
+<div class="signuptab">
+    <h1>Registration</h1>
+    <b><a href="#" id="closeTab">X</a></b>
+    <form action="login.php" name="signup" method="post" id="formData">
+        <label for="fullname">Full Name</label><br>
+        <input type="text" name="Fullname" id="fullname" placeholder="Enter fullname"  ><br>
+        <span id="fname" ></span>
+        <label for="Username">Gmail</label><br>
+        <input type="text" name="Username" id="userName" placeholder="Gmail"  ><br>
+        <span id="uname" ></span> 
+        <label for="fullname">Password</label><br>
+        <input type="text" name="Password" id="password" placeholder="New Password" ><br>
+        <span id="pname" ></span> 
+        <label for="birthday">Birthday</label><br>
+        <div class="birthday">
+        <select name="Month" id="month" >
+            <option value="01" name="" >Jan</option>
+            <option value="02" name="" >Mar</option>
+            <option value="03" name="" >Feb</option>
+            <option value="04" name="" >April</option>
+            <option value="05" name="" >May</option>
+            <option value="06" name="" >Jun</option>
+            <option value="07" name="" >Jul</option>
+            <option value="08" name="" >Aug</option>
+            <option value="09" name="" >Sep</option>
+            <option value="10" name="" >Oct</option>
+            <option value="11" name="" >Nov</option>
+            <option value="12" name="" >Dec</option>
+        </select>
+   
+  
+        <select name="Day" id="day" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+
+
+        </select>
+
+        <select name="Year" id="year">
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+
+        </select>
+        </div>
+        <label for="Gender">Gender</label><br>
+        <!-- <span id="erorGender"></span>         -->
+            <div class="gender">
+        <button type="button" class="genderButton" name="gender" value="Female"  >Female</button>        
+        <button type="button" class="genderButton" name="gender" value="Male"  >Male</button>        
+        <button type="button" class="genderButton" name="gender" value="Others"  >Others</button> 
+        <input type="hidden" id="selectedGender" name="gender" value="">
+        </div>
+        <div class="othersInside">
+            <label for="category">Category</label>
+        <select name="pronoun" id="pronoun">
+            <option value="">Select your pronoun</option>
+            <option value="She:'Wish her a happy birthday!'">She: "Wish her a happy birthday!"</option>
+            <option value="He: Wish him a happy birthday!">He: "Wish him a happy birthday!"</option>
+            <option value="They: Wish them a happy birthday!">They: "Wish them a happy birthday!"</option>
+        </select> 
+          <label for="">Your pronoun is visible to everyone.</label>
+          <input type="text" name="option" placeholder="Gender (Optional)">
+    </div>
+        <div class="termsandcondition">
+        <p>People who use our service may have uploaded your contact information to
+            Img . <a href="">Learn more.</a> <br><br>
+            <input type="checkbox" name="checkbox" id="check" required> 
+            By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="">Privacy Policy</a> and <a href="">Cookies Policy.</a>  <br> 
+            You may receive SMS Notifications from us and can opt out any time.</p>    
+        </div>
+        <input type="submit" name="Confirm" value="Confirm" id="submitBtn" >
+        </form>
+</div>
+
+</body>
+<script src="login.js"></script>
+
+</html>
